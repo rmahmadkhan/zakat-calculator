@@ -3,6 +3,7 @@ package com.ahmadkhan.zakatcalculator;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,5 +22,19 @@ public class MainActivity extends AppCompatActivity {
 
         Button buttonCalculate = findViewById(R.id.buttonCalculate);
         TextView textViewPayableZakat = findViewById(R.id.textViewPayableZakat);
+
+        buttonCalculate.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        double totalAmount = Double.parseDouble(editTextCashInHand.getText().toString()) + Double.parseDouble(editTextSavings.getText().toString()) + Double.parseDouble(editTextGoldSilver.getText().toString()) - Double.parseDouble(editTextLoans.getText().toString());
+                        double calculatedZakat = totalAmount*0.025;
+
+                        String payableZakat = totalAmount >= 80933 ? String.format("Payable Zakat: %s PKR", calculatedZakat) : "Zakat is not applicable ot your finances.";
+
+                        textViewPayableZakat.setText(payableZakat);
+                    }
+                }
+        );
     }
 }
