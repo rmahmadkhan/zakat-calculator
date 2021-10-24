@@ -129,4 +129,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLoans" />
 
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="221dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="50dp"
+        android:text="Calculate"
+        app:backgroundTint="#32cd32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLoans" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
