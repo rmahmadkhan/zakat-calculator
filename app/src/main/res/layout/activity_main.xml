@@ -140,4 +140,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLoans" />
 
+    <TextView
+        android:id="@+id/textViewPayableZakat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Payable Zakat: 0 PKR"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#32cd32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculate" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
